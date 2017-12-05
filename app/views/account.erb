@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
+    <% if User.is_logged_in? %>
+      <h3> Username: <%= current_user.username %> </h3>
+      <h3> Account Balance: <%= current_user.balance %> </h3>
 
     <a href="/logout">Log Out</a>
   </body>
