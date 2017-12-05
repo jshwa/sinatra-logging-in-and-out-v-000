@@ -9,7 +9,9 @@
     <% if User.is_logged_in? %>
       <h3> Username: <%= current_user.username %> </h3>
       <h3> Account Balance: <%= current_user.balance %> </h3>
-
-    <a href="/logout">Log Out</a>
+      <a href="/logout">Log Out</a>
+    <% else %>
+        You Must <a href="/">Log In</a> to View Your Balance
+    <% end %>
   </body>
 </html>
