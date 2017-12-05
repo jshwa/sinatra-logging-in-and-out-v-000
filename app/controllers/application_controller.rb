@@ -14,8 +14,9 @@ class ApplicationController < Sinatra::Base
     if @user = User.find_by(params)
       session[:id] = @user.id
       redirect '/account'
-    else 
+    else
       erb :error
+    end
   end
 
   get '/account' do
@@ -28,4 +29,3 @@ class ApplicationController < Sinatra::Base
 
 
 end
-
